@@ -1,0 +1,22 @@
+  FOR INITIALISATION
+
+ git config--global user.name"navjeet"
+git config--global user.email"ghotranavjeet592@gmail.com" git init //(to initialise )
+git status //(to check the status)
+git add  //(to add the files at the git there are two ways)
+(a) git add. //(to add all files together)
+(b) git add assignment1 //(to add individual file)
+git status. //(to check whether there is any change or not)
+git commit-m"message to be shown" //(to make the commits)
+git log //(to check all previous commits)
+git remote add origin "link"
+git push origin master
+
+
+   FOR UPDATION
+  
+  
+git add.
+git commit-m "your file has been updated". 
+git push origin master
+  
