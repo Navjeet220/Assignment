@@ -57,5 +57,16 @@ print(p)
 #             tweet = '''Good advice! RT @TheNextWeb: What I would do differently if I was learning to code today http://t.co/lbwej0pxOd cc: @garybernhardt #rstats''' 
 #           desired_output = 'Good advice What I would do differently if I was learning to code today'
 #SOLUTION:
+import re
+tweet ='''Good advice! RT @TheNextWeb:What I would do differently if I was learning to code today http://t.co/lbwej0pxOd cc: @garybernhardt'''
 
+def clean_tweet(tweet):
+    tweet=re.sub('http\S+\s*',' ',tweet) 
+    tweet=re.sub('RT|cc',' ',tweet)
+    tweet=re.sub('#\S+',' ',tweet)
+    tweet=re.sub('@\S+',' ',tweet)
+    tweet=re.sub('[%s]'% re.escape("""!"#$%&'( )*+,-./:;<=>?@[\]^_ `{|}~"""),' ',tweet)
+    #tweet=re.sub('\s+',' ',tweet)
+    return tweet
+print(clean_tweet (tweet))
 
